@@ -2,23 +2,7 @@
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 	if ($_REQUEST['Body'] == 'Monday' || $_REQUEST['Body'] == 'monday' || $_REQUEST['Body'] == 'Lunes'|| $_REQUEST['Body'] == 'lunes') {
-        mondayWord();
-    }else if($_REQUEST['Body'] == 'Tuesday' || $_REQUEST['Body'] == 'tuesday'|| $_REQUEST['Body'] == 'Martes'|| $_REQUEST['Body'] == 'martes'){
-        tuesdayWord();
-    }else if($_REQUEST['Body'] == 'Wednesday' || $_REQUEST['Body'] == 'Wedneday'|| $_REQUEST['Body'] == 'Miyerkules'|| $_REQUEST['Body'] == 'miyerkules'){
-        wednesdayWord();
-    }else if($_REQUEST['Body'] == 'Thursday' || $_REQUEST['Body'] == 'Thursday'|| $_REQUEST['Body'] == 'Huwebes'|| $_REQUEST['Body'] == 'huwebes'){
-        thursdayWord();
-    }else if($_REQUEST['Body'] == 'Friday' || $_REQUEST['Body'] == 'Friday'|| $_REQUEST['Body'] == 'Biyernes'|| $_REQUEST['Body'] == 'biyernes'){
-        fridayWord();
-    }else if($_REQUEST['Body'] == 'Saturday' || $_REQUEST['Body'] == 'Saturday'|| $_REQUEST['Body'] == 'Sabado'|| $_REQUEST['Body'] == 'sabado'){
-        saturdayWord();
-    }else if($_REQUEST['Body'] == 'Sunday' || $_REQUEST['Body'] == 'Sunday'|| $_REQUEST['Body'] == 'Linggo'|| $_REQUEST['Body'] == 'linggo'){
-        sundayWord();
-    }
-
-function mondayWord(){
-    $n = rand(0, 4);
+        $n = rand(0, 4);
         switch($n){
             case 0:
                 $message = "Money [muhn-ee] - Pera\nI need money - kailangan ko ng pera";
@@ -33,14 +17,13 @@ function mondayWord(){
                 $message ="Water [waw-ter] - Tubig\nCan I buy a bottle of water? - Maaari ba akong bumili ng isang bot ng tubig?";
                 break;
             case 4:
-                $message ="Chicken [chik-uh n]- Manok\nI want chicken for dinner - Gusto kong monk para sa hapunan";
+                $message ="Chicken [chik-uh n] - Manok\nI want chicken for dinner - Gusto kong monk para sa hapunan";
                 break;
             default:
                 $message = "A word a day";
         }
-}
-function tuesdayWord(){
-    $n = rand(0, 4);
+    }else if($_REQUEST['Body'] == 'Tuesday' || $_REQUEST['Body'] == 'tuesday'|| $_REQUEST['Body'] == 'Martes'|| $_REQUEST['Body'] == 'martes'){
+        $n = rand(0, 4);
         switch($n){
             case 0:
                 $message ="Rich - Malakas\nYour family is rich - Ang iyong pamilya ay mayaman";
@@ -60,9 +43,8 @@ function tuesdayWord(){
             default:
                 $message = "A word a day";
         }
-}
-function wednesdayWord(){
-    $n = rand(0, 4);
+    }else if($_REQUEST['Body'] == 'Wednesday' || $_REQUEST['Body'] == 'Wedneday'|| $_REQUEST['Body'] == 'Miyerkules'|| $_REQUEST['Body'] == 'miyerkules'){
+        $n = rand(0, 4);
         switch($n){
              case 0:
                 $message ="Breakfast [brek-fuh st] - Almusal\nWhat's for breakfast? - Ano para sa almusal?";
@@ -82,9 +64,8 @@ function wednesdayWord(){
             default:
                 $message = "A word a day";
         }
-}
-function thursdayWord(){
-    $n = rand(0, 10);
+    }else if($_REQUEST['Body'] == 'Thursday' || $_REQUEST['Body'] == 'Thursday'|| $_REQUEST['Body'] == 'Huwebes'|| $_REQUEST['Body'] == 'huwebes'){
+        $n = rand(0, 10);
         switch($n){
             case 0:
                 $message = "Cat - Pusa\nCat has nine lives - Pusa ay may siyam na buhay";
@@ -104,9 +85,8 @@ function thursdayWord(){
             default:
                 $message = "A word a day";
         }
-}
-function fridayWord(){
-    $n = rand(0, 4);
+    }else if($_REQUEST['Body'] == 'Friday' || $_REQUEST['Body'] == 'Friday'|| $_REQUEST['Body'] == 'Biyernes'|| $_REQUEST['Body'] == 'biyernes'){
+        $n = rand(0, 4);
         switch($n){
             case 0:
                 $message = "Game [geym] - Laro\nI want to play a game - Gusto ko upang i-play sa isang laro";
@@ -126,9 +106,8 @@ function fridayWord(){
             default:
                 $message = "A word a day";
         }
-}
-function saturdayWord(){
-    $n = rand(0, 4);
+    }else if($_REQUEST['Body'] == 'Saturday' || $_REQUEST['Body'] == 'Saturday'|| $_REQUEST['Body'] == 'Sabado'|| $_REQUEST['Body'] == 'sabado'){
+        $n = rand(0, 4);
         switch($n){
             case 0:
                 $message = "Born [bawrn]- Ipinanganak\nI was born in December- Ay ipinanganak sa Disyembre";
@@ -148,9 +127,8 @@ function saturdayWord(){
             default:
                 $message = "A word a day";
         }
-}
-function sundayWord(){
-    $n = rand(0, 4);
+    }else if($_REQUEST['Body'] == 'Sunday' || $_REQUEST['Body'] == 'Sunday'|| $_REQUEST['Body'] == 'Linggo'|| $_REQUEST['Body'] == 'linggo'){
+        $n = rand(0, 4);
         switch($n){
              case 0:
                 $message ="Soup [soop] - Sopas\nDo you want soup? - Ang gusto mong sopas";
@@ -170,7 +148,7 @@ function sundayWord(){
             default:
                 $message = "A word a day";
         }
-}
+    }
 ?>
 <Response>
     <Message><?php echo $message ?></Message>
